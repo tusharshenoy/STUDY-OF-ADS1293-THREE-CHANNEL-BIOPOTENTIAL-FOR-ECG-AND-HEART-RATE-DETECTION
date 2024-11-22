@@ -88,6 +88,7 @@ To configure the ADS1293 device for ECG data acquisition, several registers need
 Further, the OSC_CN register (address 0x12) is configured to 0x04 to use an external crystal, feeding the oscillator output to the digital section for accurate timing in data acquisition. The AFE_SHDN_CN register (address 0x14) is set to 0x24, shutting down the signal path for the unused Channel 3, conserving power and reducing potential interference with active channels. The R2_RATE register (address 0x21) is set to 0x02, configuring the decimation rate of R2 to 5 for all channels, making the data more manageable for processing and storage. For Channel 1, the R3_RATE_CH1 register (address 0x22) is set to 0x02, setting the decimation rate of R3 to 6, and similarly for the Channel 2, the R3_RATE_CH2 register (address 0x23) is set to 0x02 to ensure consistent data processing across channels.
 Additionally, the DRDYB_SRC register (address 0x27) is configured to 0x08, setting the DRDY source to Channel 1 ECG, ensuring the data ready signal corresponds to the fastest channel. The CH_CNFG register (address 0x2F) is set to 0x30, enabling both the Channels 1 and 2 ECG for loop a read back mode, allowing continuous data acquisition and read-back for these channels. Finally, the CONFIG register (address 0x00) is set to 0x01 to start the data conversion process, initiating the continuous acquisition of ECG data. Time stamping is done, and the ECG signals are collected for the duration specified by the user, providing a precise and user-defined recording period for the ECG data.
 
+
 ## IV.RESULTS AND DISCUSSION      
  
 The 3-lead ECG data acquisition module is developed and tested with the help of NI myRIO. The ECG signal is monitored using NI LabVIEW, Figure 3 shows the programming interface or GUI of the LabVIEW software.
@@ -122,12 +123,20 @@ VI.  REFERENCES
 [2] T. Shaown, I. Hasan, M. M. R. Mim, and M. S. Hossain, "IoT-based Portable ECG Monitoring System for Smart Healthcare," 2019 1st International Conference on Advances in Science, Engineering and Robotics Technology (ICASERT), Dhaka, Bangladesh, 2019, pp. 1-5, doi: 10.1109/ICASERT.2019.8934622.
 
 [3] M. Neyja, S. Mumtaz, K. M. S. Huq, S. A. Busari, J. Rodriguez, and Z. Zhou, "An IoT-Based E-Health Monitoring System Using ECG Signal," GLOBECOM 2017 - 2017 IEEE Global Communications Conference, Singapore, 2017, pp. 1-6, doi: 10.1109/GLOCOM.2017.8255023. 
+
 [4] Sahu, M. L., Atulkar, M., Ahirwal, M. K., & Ahamad, A. (2021). IoT-enabled cloud-based real-time remote ECG monitoring system. Journal of Medical Engineering & Technology, 45(6), 473–485. https://doi.org/10.1080/03091902.2021.1921870
+
 [5] Yang, Z., Zhou, Q., Lei, L. et al. (2016). An IoT-cloud Based Wearable ECG Monitoring System for Smart Healthcare. J Med Syst 40, 286. https://doi.org/10.1007/s10916-016-0644-9
+
 [6] Pagadala Pavan Kumar, Thokala Santhosh Naidu, S.Vishnu (2019). Retrieval Number: A10211291S52019/2019©BEIESP. DOI: 10.35940/ijeat.A1021.1291S52019
+
 [7] S. Joseph, D. F. D. Shahila, and S. Patnaik, "IOT based Remote Heartbeat Monitoring," 2019 International Conference on Advances in Computing, Communication and Control (ICAC3), Mumbai, India, 2019, pp. 1-5, doi: 10.1109/ICAC347590.2019.9036735
+
 [8] Rahman, Md. Obaidur; Mehedi Shamrat, F. M. Javed; Kashem, Mohammod Abul; Akter, Most. Fahmida; Chakraborty, Sovon; Ahmed, Marzia; Mustary, Shobnom (2022). International Journal of Electrical & Computer Engineering, 12(4), 3739. DOI: 10.11591/ijece.v12i4.pp3739-3751
+
 [9] A. Rahman, T. Rahman, N. H. Ghani, S. Hossain, and J. Uddin, "IoT Based Patient Monitoring System Using ECG Sensor," 2019 International Conference on Robotics, Electrical and Signal Processing Techniques (ICREST), Dhaka, Bangladesh, 2019, pp. 378-382, doi: 10.1109/ICREST.2019.8644065
+
 [10] G. Xu, "IoT-Assisted ECG Monitoring Framework with Secure Data Transmission for Health Care Applications," in IEEE Access, vol. 8, pp. 74586-74594, 2020, doi: 10.1109/ACCESS.2020.2988059
+
 [11] Hasan, D., & Ismaeel, A. (2020). Designing ECG Monitoring Healthcare System Based on Internet of Things Blynk Application. JASTT, 1(2), 106-111
 
